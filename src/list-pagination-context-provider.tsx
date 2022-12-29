@@ -13,6 +13,7 @@ type PaginationMeta = {
 };
 
 type Pagination = PaginationState & PaginationMeta;
+type PaginationArgs = Pick<PaginationState, 'totalItems' | 'pageSize'>;
 
 export const usePaginationContext = create<{
   pagination: Pagination;
@@ -28,7 +29,7 @@ export const usePaginationContext = create<{
     previousEnabled: false,
     totalItems: 0,
   },
-  setPagination: (pagination: Pagination) => set({ pagination }),
+  setPagination: (args: PaginationArgs) => set({ pagination: args }),
   setNextPage: () => {},
   setPrevPage: () => {},
   setFirstPage: () => {},
