@@ -5,11 +5,11 @@
 
 - ListPaginationContextProvider 에서 사용되는 상태값들은 다음과 같습니다.
     + totalPages: 전체 페이지 수
-    + pageSize
-    + currentPage
-    + nextEnabled
-    + previousEnabled 
-    + totalItems
+    + pageSize: 한 페이지에 보여줄 아이템의 수
+    + currentPage: 현재 페이지
+    + nextEnabled: 다음 페이지 버튼 활성화 여부
+    + previousEnabled : 이전 페이지 버튼 활성화 여부
+    + totalItems: 전체 아이템의 수 (전체 상품 수)
 - ListPaginationContextProvider 에서 제공하는 함수들은 다음과 같습니다.
     + setNextPage: 다음 페이지 버튼을 클릭했을 때 동작하는 함수
     + setPrevPage: 이전 페이지 버튼을 클릭했을 때 동작하는 함수
