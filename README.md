@@ -1,4 +1,4 @@
-# Paagination (inspired by [react-admin](https://github.com/marmelab/react-admin))
+# Pagination (inspired by [react-admin](https://github.com/marmelab/react-admin))
 
 ### 구현해야 할 것
 1.`ListPaginationContextProvider`의 구현을 완성해야 합니다.
