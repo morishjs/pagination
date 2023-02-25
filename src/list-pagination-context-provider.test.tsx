@@ -21,7 +21,6 @@ describe('ListPaginationContextProvider', () => {
       <ListPaginationContextProvider
         value={{
           total: 4,
-          currentPage: 0,
           perPage: 2,
         }}
       >
@@ -40,7 +39,6 @@ describe('ListPaginationContextProvider', () => {
       <ListPaginationContextProvider
         value={{
           total: 4,
-          currentPage: 0,
           perPage: 2,
         }}
       >

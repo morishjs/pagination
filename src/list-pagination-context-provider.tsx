@@ -15,6 +15,8 @@ type PaginationMeta = {
 type Pagination = PaginationState & PaginationMeta;
 type PaginationArgs = Pick<PaginationState, 'totalItems' | 'pageSize'>;
 
+const INITIAL_PAGE = 1;
+
 export const usePaginationContext = create<{
   pagination: Pagination;
   setPagination: (pg: Pagination) => void;
@@ -24,12 +26,12 @@ export const usePaginationContext = create<{
   pagination: {
     totalPages: 0,
     pageSize: 0,
-    currentPage: 0,
+    currentPage: INITIAL_PAGE,
     nextEnabled: false,
     previousEnabled: false,
     totalItems: 0,
   },
-  setPagination: (args: PaginationArgs) => set({ pagination: args }),
+  setPagination: (args: PaginationArgs) => {},
   setNextPage: () => {},
   setPrevPage: () => {},
   setFirstPage: () => {},
@@ -38,7 +40,6 @@ export const usePaginationContext = create<{
 export interface ListContextProps {
   total: number;
   perPage: number;
-  currentPage?: number;
 }
 
 type ListPaginationContextProps = ListContextProps;
@@ -47,16 +48,10 @@ const ListPaginationContextProvider: FCC<{ value: ListPaginationContextProps }> 
   const { setPagination } = usePaginationContext();
 
   React.useEffect(() => {
-    /*
     setPagination({
-      totalPages: totalPages,
       pageSize: value.perPage,
-      currentPage,
-      nextEnabled,
-      previousEnabled,
       totalItems: value.total,
     });
-*/
   }, [value]);
 
   return <>{children}</>;
