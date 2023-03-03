@@ -19,7 +19,7 @@ const INITIAL_PAGE = 1;
 
 export const usePaginationContext = create<{
   pagination: Pagination;
-  setPagination: (pg: Pagination) => void;
+  setPagination: (pg: PaginationArgs) => void;
   setNextPage: () => void;
   setFirstPage: () => void;
 }>((set, get) => ({

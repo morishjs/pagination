@@ -28,7 +28,7 @@ describe('ListPaginationContextProvider', () => {
       </ListPaginationContextProvider>,
     );
 
-    expect(getByText('currentPage: 0')).not.toBeNull();
+    expect(getByText('currentPage: 1')).not.toBeNull();
     expect(getByText('totalPages: 2')).not.toBeNull();
     expect(getByText('pageSize: 2')).not.toBeNull();
     expect(getByText('view more')).not.toBeNull();
